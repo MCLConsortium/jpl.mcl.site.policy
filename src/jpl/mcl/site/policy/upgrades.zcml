@@ -2,4 +2,23 @@
 <configure
     xmlns='http://namespaces.zope.org/zope'
     xmlns:genericsetup='http://namespaces.zope.org/genericsetup'
-    i18n_domain='jpl.mcl.site.policy'/>
+    i18n_domain='jpl.mcl.site.policy'>
+    <genericsetup:upgradeStep
+        source='0'
+        destination='1'
+        title='Upgrade 0 to 1'
+        description='Upgrade the MCL site policy from version 0 to version 1 (null upgrade, no custom steps required)'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.nullUpgradeStep'
+        sortkey='1'
+    />
+    <genericsetup:upgradeStep
+        source='1'
+        destination='2'
+        title='MCL Policy Upgrade 1 to 2'
+        description='Upgrade the MCL site policy from profile 1 to 2 with jpl.mcl.site.knowledge (new dependency)'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.installJPLMCLSiteKnowledge'
+        sortkey='1'
+    />
+</configure>

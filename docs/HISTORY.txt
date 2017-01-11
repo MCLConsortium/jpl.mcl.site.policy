@@ -4,6 +4,12 @@ Changelog
 The following describes the changes between releases.
 
 
+0.0.2 — TBD
+-----------
+
+• CA-1463: Includes jpl.mcl.site.knowledge as a new dependency
+
+
 0.0.1 — FCS
 -----------
 

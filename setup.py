@@ -28,10 +28,11 @@ _entryPoints = {
 }
 _requirements = [
     'setuptools',
-    'Products.CMFPlone',
-    'z3c.jbot',
+    'jpl.mcl.site.knowledge',
     'plone.api',
     'Products.CMFPlacefulWorkflow',
+    'Products.CMFPlone',
+    'z3c.jbot',
 ]
 _classifiers = [
     'Development Status :: 2 - Pre-Alpha',
