@@ -22,6 +22,7 @@ class SetupTest(unittest.TestCase):
         '''Verify our dependencies got installed'''
         qi = plone.api.portal.get_tool('portal_quickinstaller')
         self.assertTrue(qi.isProductInstalled('jpl.mcl.site.knowledge'), 'jpl.mcl.site.knowledge failed to install')
+        self.assertTrue(qi.isProductInstalled('jpl.mcl.site.sciencedata'), 'jpl.mcl.site.knowledge failed to install')
 
 
 def test_suite():

@@ -28,6 +28,7 @@ _entryPoints = {
 }
 _requirements = [
     'setuptools',
+    'jpl.mcl.site.sciencedata',
     'jpl.mcl.site.knowledge',
     'plone.api',
     'Products.CMFPlacefulWorkflow',

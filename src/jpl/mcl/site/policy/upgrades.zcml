@@ -21,4 +21,13 @@
         handler='jpl.mcl.site.policy.upgrades.installJPLMCLSiteKnowledge'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='2'
+        destination='3'
+        title='MCL Policy Upgrade 2 to 3'
+        description='Upgrade the MCL site policy from profile 2 to 3 with jpl.mcl.site.sciencedata (new dependency)'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.installJPLMCLSiteSciencedata'
+        sortkey='1'
+    />
 </configure>

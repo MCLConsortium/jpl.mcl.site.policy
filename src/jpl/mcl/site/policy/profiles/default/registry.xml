@@ -1,0 +1,7 @@
+<registry>
+    <record name='plone.displayed_types' interface='Products.CMFPlone.interfaces.controlpanel.INavigationSchema' field='displayed_types'>
+        <value purge='false'>
+            <element>jpl.mcl.site.sciencedata.sciencedatafolder</element>
+        </value>
+    </record>
+</registry>
