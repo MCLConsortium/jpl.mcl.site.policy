@@ -24,6 +24,7 @@ def installJPLMCLSiteKnowledge(context):
     u'''Install jpl.mcl.site.knowledge.'''
     qi = plone.api.portal.get_tool('portal_quickinstaller')
     qi.installProduct('jpl.mcl.site.knowledge')
+    
 
 def installJPLMCLSiteSciencedata(context):
     u'''Install jpl.mcl.site.sciencedata.'''
