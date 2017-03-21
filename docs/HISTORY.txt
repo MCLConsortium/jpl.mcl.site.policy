@@ -8,6 +8,7 @@ The following describes the changes between releases.
 -----------
 
 • CA-1463: Includes jpl.mcl.site.knowledge as a new dependency
+• CA-1509: Traceback error on Contents button; upgrade to Plone 5.0.7
 
 
 0.0.1 — FCS

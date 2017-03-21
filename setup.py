@@ -34,6 +34,10 @@ _requirements = [
     'Products.CMFPlacefulWorkflow',
     'Products.CMFPlone',
     'z3c.jbot',
+    'plone.app.collection',
+    'plone.app.imaging',
+    'Products.Archetypes',
+    'Products.ATContentTypes',
 ]
 _classifiers = [
     'Development Status :: 2 - Pre-Alpha',
