@@ -30,4 +30,13 @@
         handler='jpl.mcl.site.policy.upgrades.installJPLMCLSiteSciencedata'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='3'
+        destination='4'
+        title='MCL Policy Upgrade 3 to 4'
+        description='Upgrade the MCL site policy from profile 3 to 4 with tabs from knowledge and sciencedata reordered'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.orderFolderTabs'
+        sortkey='1'
+    />
 </configure>

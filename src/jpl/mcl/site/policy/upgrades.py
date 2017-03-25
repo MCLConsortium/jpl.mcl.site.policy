@@ -25,8 +25,18 @@ def installJPLMCLSiteKnowledge(context):
     qi = plone.api.portal.get_tool('portal_quickinstaller')
     qi.installProduct('jpl.mcl.site.knowledge')
     
-
 def installJPLMCLSiteSciencedata(context):
     u'''Install jpl.mcl.site.sciencedata.'''
     qi = plone.api.portal.get_tool('portal_quickinstaller')
     qi.installProduct('jpl.mcl.site.sciencedata')
+
+#order folder tabs in logical order
+def orderFolderTabs(context):
+    portal = context.getSite()
+    # Members < Working Groups < Resources < News & Meetings < Science Data
+    idx = 1
+    for i in ('members', 'working-groups', 'resources', 'news-meetings', 'science-data'):
+        portal.moveObject(i, idx)
+        idx += 1
+    ploneUtils = getToolByName(portal, 'plone_utils')
+    ploneUtils.reindexOnReorder(portal)

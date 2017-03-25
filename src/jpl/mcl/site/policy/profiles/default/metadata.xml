@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <metadata>
-    <version>3</version> <!-- Profile version 2 goes with jpl.mcl.site.policy 0.0.2 and mcl-site 1.0.2 -->
+    <version>4</version> <!-- Profile version 2 goes with jpl.mcl.site.policy 0.0.2 and mcl-site 1.0.2 -->
     <description>Turns a Plone site into an MCL site</description>
     <dependencies>
         <dependency>profile-jpl.mcl.site.knowledge:default</dependency>
