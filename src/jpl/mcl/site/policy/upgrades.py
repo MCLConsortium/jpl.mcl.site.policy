@@ -13,6 +13,9 @@ if socket.gethostname() == 'tumor.jpl.nasa.gov' or socket.gethostname().endswith
 else:
     _rdfBaseURL = u'https://mcl.jpl.nasa.gov/ksdb/publishrdf/?rdftype='
 
+def _getPortal(context):
+    return getToolByName(context, 'portal_url').getPortalObject()
+
 def nullUpgradeStep(context):
     u'''Null upgrade step does nothing for when no custom behavior is needed.'''
     pass
@@ -32,7 +35,7 @@ def installJPLMCLSiteSciencedata(context):
 
 #order folder tabs in logical order
 def orderFolderTabs(context):
-    portal = context.getSite()
+    portal = _getPortal(context)
     # Members < Working Groups < Resources < News & Meetings < Science Data
     idx = 1
     for i in ('members', 'working-groups', 'resources', 'news-meetings', 'science-data'):
