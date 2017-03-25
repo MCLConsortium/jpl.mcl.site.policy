@@ -5,6 +5,10 @@ u'''MCL — custom upgrade steps.'''
 import plone.api
 from Products.CMFCore.utils import getToolByName
 from plone.dexterity.utils import createContentInContainer
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+from Products.CMFPlone.interfaces import INavigationSchema
+
 import socket
 
 # There has to be a better way of doing this:
@@ -36,6 +40,12 @@ def installJPLMCLSiteSciencedata(context):
 #order folder tabs in logical order
 def orderFolderTabs(context):
     portal = _getPortal(context)
+
+    #Expose the correct folder tabs
+    registry = getUtility(IRegistry)
+    navigation_settings = registry.forInterface(INavigationSchema, prefix='plone')
+    navigation_settings.displayed_types = ('Folder', 'jpl.mcl.site.knowledge.groupfolder', 'jpl.mcl.site.knowledge.participatingsitefolder', 'jpl.mcl.site.sciencedata.sciencedatafolder')
+
     # Members < Working Groups < Resources < News & Meetings < Science Data
     idx = 1
     for i in ('members', 'working-groups', 'resources', 'news-meetings', 'science-data'):
