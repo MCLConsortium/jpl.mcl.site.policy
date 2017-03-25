@@ -3,6 +3,7 @@
         <value purge='false'>
             <element>jpl.mcl.site.sciencedata.sciencedatafolder</element>
             <element>jpl.mcl.site.knowledge.groupfolder</element>
+            <element>jpl.mcl.site.knowledge.participatingsitefolder</element>
         </value>
     </record>
 </registry>
