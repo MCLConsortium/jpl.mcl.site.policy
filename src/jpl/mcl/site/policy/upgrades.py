@@ -48,7 +48,7 @@ def orderFolderTabs(context):
 
     # Members < Working Groups < Resources < News & Meetings < Science Data
     idx = 1
-    for i in ('members', 'working-groups', 'resources', 'news-meetings', 'science-data'):
+    for i in ('members', 'working-groups-new', 'resources', 'news-meetings', 'science-data'):
         portal.moveObject(i, idx)
         idx += 1
     ploneUtils = getToolByName(portal, 'plone_utils')
