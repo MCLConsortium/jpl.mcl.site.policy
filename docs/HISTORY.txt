@@ -4,8 +4,8 @@ Changelog
 The following describes the changes between releases.
 
 
-0.0.2 — TBD
------------
+0.0.2 — For SCIENCE!
+--------------------
 
 • CA-1463: Includes jpl.mcl.site.knowledge as a new dependency
 • CA-1509: Traceback error on Contents button; upgrade to Plone 5.0.7
