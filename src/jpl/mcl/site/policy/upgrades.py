@@ -2,14 +2,15 @@
 
 u'''MCL — custom upgrade steps.'''
 
-import plone.api
-from Products.CMFCore.utils import getToolByName
+
 from plone.dexterity.utils import createContentInContainer
 from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
+from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import INavigationSchema
-
+from zope.component import getUtility
+import plone.api
 import socket
+
 
 # There has to be a better way of doing this:
 if socket.gethostname() == 'tumor.jpl.nasa.gov' or socket.gethostname().endswith('.local'):
@@ -17,31 +18,33 @@ if socket.gethostname() == 'tumor.jpl.nasa.gov' or socket.gethostname().endswith
 else:
     _rdfBaseURL = u'https://mcl.jpl.nasa.gov/ksdb/publishrdf/?rdftype='
 
+
 def _getPortal(context):
     return getToolByName(context, 'portal_url').getPortalObject()
+
 
 def nullUpgradeStep(context):
     u'''Null upgrade step does nothing for when no custom behavior is needed.'''
     pass
 
-def _getPortal(context):
-    return getToolByName(context, 'portal_url').getPortalObject()
 
 def installJPLMCLSiteKnowledge(context):
     u'''Install jpl.mcl.site.knowledge.'''
     qi = plone.api.portal.get_tool('portal_quickinstaller')
     qi.installProduct('jpl.mcl.site.knowledge')
-    
+
+
 def installJPLMCLSiteSciencedata(context):
     u'''Install jpl.mcl.site.sciencedata.'''
     qi = plone.api.portal.get_tool('portal_quickinstaller')
     qi.installProduct('jpl.mcl.site.sciencedata')
 
-#order folder tabs in logical order
+
 def orderFolderTabs(context):
+    u'''order folder tabs in logical order'''
     portal = _getPortal(context)
 
-    #Expose the correct folder tabs
+    # Expose the correct folder tabs
     registry = getUtility(IRegistry)
     navigation_settings = registry.forInterface(INavigationSchema, prefix='plone')
     navigation_settings.displayed_types = ('Folder', 'jpl.mcl.site.knowledge.groupfolder', 'jpl.mcl.site.knowledge.participatingsitefolder', 'jpl.mcl.site.sciencedata.sciencedatafolder')
