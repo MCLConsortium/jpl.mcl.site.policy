@@ -39,4 +39,13 @@
         handler='jpl.mcl.site.policy.upgrades.orderFolderTabs'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='4'
+        destination='5'
+        title='MCL Policy Upgrade 4 to 5'
+        description='Upgrade the MCL site policy from profile 3 to 4 with LDAP support'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.installLDAP'
+        sortkey='1'
+    />
 </configure>

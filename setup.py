@@ -28,16 +28,20 @@ _entryPoints = {
 }
 _requirements = [
     'setuptools',
-    'jpl.mcl.site.sciencedata',
+    'five.formlib',
     'jpl.mcl.site.knowledge',
+    'jpl.mcl.site.sciencedata',
     'plone.api',
+    'plone.app.collection',
+    'plone.app.form',
+    'plone.app.imaging',
+    'plone.app.ldap',
+    'plone.app.upgrade',
+    'Products.Archetypes',
+    'Products.ATContentTypes',
     'Products.CMFPlacefulWorkflow',
     'Products.CMFPlone',
     'z3c.jbot',
-    'plone.app.collection',
-    'plone.app.imaging',
-    'Products.Archetypes',
-    'Products.ATContentTypes',
 ]
 _classifiers = [
     'Development Status :: 2 - Pre-Alpha',

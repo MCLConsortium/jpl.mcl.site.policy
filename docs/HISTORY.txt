@@ -4,6 +4,12 @@ Changelog
 The following describes the changes between releases.
 
 
+0.0.3 — TBD
+-----------
+
+• CA-1542: Make MCL portal authenticate via LDAP
+
+
 0.0.2 — For SCIENCE!
 --------------------
 
