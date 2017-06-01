@@ -4,8 +4,8 @@ Changelog
 The following describes the changes between releases.
 
 
-0.0.3 — TBD
------------
+0.0.3 — Direct!
+---------------
 
 • CA-1542: Make MCL portal authenticate via LDAP
 
