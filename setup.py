@@ -7,7 +7,7 @@ import os.path
 # ------------
 
 _name            = 'jpl.mcl.site.policy'
-_version         = '0.0.3'
+_version         = '1.0.0'
 _description     = "Policy package for MCL"
 _url             = 'http://mcl.jpl.nasa.gov/software/' + _name
 _downloadURL     = 'http://oodt.jpl.nasa.gov/dist/mcl/' + _name + '-' + _version + '.tar.gz'
