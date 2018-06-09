@@ -48,4 +48,13 @@
         handler='jpl.mcl.site.policy.upgrades.installLDAP'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='5'
+        destination='6'
+        title='MCL Policy Upgrade 5 to 6'
+        description='Upgrade the MCL site policy from profile 5 to 6 with publications'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.addPublicationTab'
+        sortkey='1'
+    />
 </configure>

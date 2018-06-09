@@ -67,6 +67,24 @@ def orderFolderTabs(context):
     ploneUtils = getToolByName(portal, 'plone_utils')
     ploneUtils.reindexOnReorder(portal)
 
+def addPublicationTab(context):
+    u'''add publication tabs and reorder logical order'''
+    _logger.warn(u'Adding publications to MCL front page.')
+    portal = _getPortal(context)
+
+    # Expose the correct folder tabs
+    registry = getUtility(IRegistry)
+    navigation_settings = registry.forInterface(INavigationSchema, prefix='plone')
+    navigation_settings.displayed_types = ('Folder', 'jpl.mcl.site.knowledge.groupfolder', 'jpl.mcl.site.knowledge.participatingsitefolder', 'jpl.mcl.site.sciencedata.sciencedatafolder', 'jpl.mcl.site.knowledge.publicationfolder')
+
+    # Members < Working Groups < Resources < News & Meetings < Science Data
+    idx = 1
+    for i in ('members', 'working-groups-new', 'publications', 'resources', 'news-meetings', 'science-data'):
+        portal.moveObject(i, idx)
+        idx += 1
+    ploneUtils = getToolByName(portal, 'plone_utils')
+    ploneUtils.reindexOnReorder(portal)
+
 
 def _setPluginOrder(plugins, interface, desiredOrder):
     _logger.debug('Setting plugin order for %r to %r', interface, desiredOrder)
