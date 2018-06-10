@@ -23,7 +23,7 @@ _logger = logging.getLogger(__name__)
 
 
 # There has to be a better way of doing this:
-if socket.gethostname() == 'tumor.jpl.nasa.gov' or socket.gethostname().endswith('.local'):
+if socket.gethostname() == 'tumor.jpl.nasa.gov' or socket.gethostname().endswith('.local') or socket.gethostname() == 'mcl-dev.jpl.nasa.gov'::
     _rdfBaseURL = u'https://edrn-dev.jpl.nasa.gov/ksdb/publishrdf/?rdftype='
 else:
     _rdfBaseURL = u'https://mcl.jpl.nasa.gov/ksdb/publishrdf/?rdftype='
