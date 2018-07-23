@@ -28,6 +28,7 @@ _entryPoints = {
 }
 _requirements = [
     'setuptools',
+    'collective.recaptcha',
     'five.formlib',
     'jpl.mcl.site.knowledge',
     'jpl.mcl.site.sciencedata',
