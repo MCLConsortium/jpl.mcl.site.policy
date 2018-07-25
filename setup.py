@@ -29,6 +29,8 @@ _entryPoints = {
 _requirements = [
     'setuptools',
     'collective.recaptcha',
+    'eea.faceted.vocabularies',
+    'eea.facetednavigation',
     'five.formlib',
     'jpl.mcl.site.knowledge',
     'jpl.mcl.site.sciencedata',
@@ -43,6 +45,7 @@ _requirements = [
     'Products.ATContentTypes',
     'Products.CMFPlacefulWorkflow',
     'Products.CMFPlone',
+    'Products.PloneFormGen',
     'z3c.jbot',
 ]
 _classifiers = [
