@@ -38,6 +38,7 @@ _requirements = [
     'plone.app.imaging',
     'plone.app.ldap',
     'plone.app.upgrade',
+    'plone.formwidget.recaptcha',
     'Products.Archetypes',
     'Products.ATContentTypes',
     'Products.CMFPlacefulWorkflow',
