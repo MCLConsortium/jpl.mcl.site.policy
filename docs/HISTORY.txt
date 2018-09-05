@@ -4,6 +4,10 @@ Changelog
 The following describes the changes between releases.
 
 
+1.0.1 — Thought Leader Wants a Release
+--------------------------------------
+
+
 0.0.3 — Direct!
 ---------------
 
