@@ -28,10 +28,11 @@ _entryPoints = {
 }
 _requirements = [
     'setuptools',
+    'collective.captchacontactinfo',
     'collective.recaptcha',
     'eea.faceted.vocabularies',
     'eea.facetednavigation',
-    'five.formlib',
+    'five.formlib == 1.0.4',
     'jpl.mcl.site.knowledge',
     'jpl.mcl.site.sciencedata',
     'plone.api',

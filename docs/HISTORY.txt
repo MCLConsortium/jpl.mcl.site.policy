@@ -4,6 +4,12 @@ Changelog
 The following describes the changes between releases.
 
 
+1.0.2 — Gotcha! I mean CAPTCHA!
+-------------------------------
+
+• CA-1600: Add a CAPTCHA to the contact-info form
+
+
 1.0.1 — Thought Leader Wants a Release
 --------------------------------------
 
