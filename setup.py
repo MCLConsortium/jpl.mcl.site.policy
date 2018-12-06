@@ -47,6 +47,7 @@ _requirements = [
     'Products.CMFPlacefulWorkflow',
     'Products.CMFPlone',
     'Products.PloneFormGen',
+    'yafowil.plone',
     'z3c.jbot',
 ]
 _classifiers = [
