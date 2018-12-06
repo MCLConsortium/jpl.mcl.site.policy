@@ -57,4 +57,13 @@
         handler='jpl.mcl.site.policy.upgrades.addPublicationTab'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='6'
+        destination='7'
+        title='MCL Policy Upgrade 6→7'
+        description='Upgrade the MCL site policy from profile 6 to 7 without plone.app.ldap'
+        profile='jpl.mcl.site.policy:default'
+        handler='jpl.mcl.site.policy.upgrades.byeByePloneAppLDAP'
+        sortkey='1'
+    />
 </configure>

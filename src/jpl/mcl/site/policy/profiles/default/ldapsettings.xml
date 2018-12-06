@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<object name="pasldap" meta_type="LDAP Plugin" type="dict">
+ <element key="cache.cache" type="bool">True</element>
+ <element key="cache.timeout" type="int">300</element>
+ <element key="groups.attrmap" type="dict">
+  <element key="cn" type="string">cn</element>
+  <element key="description" type="string">description</element>
+  <element key="id" type="string">cn</element>
+  <element key="rdn" type="string">cn</element>
+  <element key="title" type="string">cn</element>
+  <element key="uniqueMember" type="string">uniqueMember</element>
+ </element>
+ <element key="groups.baseDN" type="string">ou=groups,o=MCL</element>
+ <element key="groups.memberOfSupport" type="bool">False</element>
+ <element key="groups.objectClasses" type="list">
+  <element type="string">groupOfUniqueNames</element>
+ </element>
+ <element key="groups.queryFilter"
+    type="string">(objectClass=groupOfUniqueNames)</element>
+ <element key="groups.scope" type="int">1</element>
+ <element key="server.ignore_cert" type="bool">False</element>
+ <element key="server.page_size" type="int">1000</element>
+ <element key="server.password" type="string"></element>
+ <element key="server.uri" type="string">ldaps://edrn.jpl.nasa.gov</element>
+ <element key="server.user" type="string">uid=admin,ou=system</element>
+ <element key="users.account_expiration" type="bool">False</element>
+ <element key="users.attrmap" type="dict">
+  <element key="email" type="string">mail</element>
+  <element key="fullname" type="string">cn</element>
+  <element key="id" type="string">uid</element>
+  <element key="login" type="string">uid</element>
+  <element key="rdn" type="string">uid</element>
+  <element key="uid" type="string">uid</element>
+ </element>
+ <element key="users.baseDN" type="string">ou=users,o=MCL</element>
+ <element key="users.expires_attr" type="string"></element>
+ <element key="users.expires_unit" type="int">0</element>
+ <element key="users.memberOfSupport" type="bool">False</element>
+ <element key="users.objectClasses" type="list">
+  <element type="string">inetOrgPerson</element>
+ </element>
+ <element key="users.queryFilter"
+    type="string">(objectClass=inetOrgPerson)</element>
+ <element key="users.scope" type="int">1</element>
+</object>
