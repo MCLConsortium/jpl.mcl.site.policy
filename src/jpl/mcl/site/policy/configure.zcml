@@ -5,9 +5,7 @@
     xmlns:zcml='http://namespaces.zope.org/zcml'
     xmlns:browser='http://namespaces.zope.org/browser'
     i18n_domain='jpl.mcl.site.policy'>
-    <include package='Products.CMFPlone' file='meta-bbb.zcml' />
     <include package="z3c.autoinclude" file="meta.zcml" />
-    <include package="Products.CMFPlone" file="meta-bbb.zcml" />
     <includeDependencies package='.' />
     <genericsetup:registerProfile
         name='default'

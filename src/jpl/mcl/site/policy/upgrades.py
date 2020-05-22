@@ -64,6 +64,7 @@ def orderFolderTabs(context):
     ploneUtils = getToolByName(portal, 'plone_utils')
     ploneUtils.reindexOnReorder(portal)
 
+
 def addPublicationTab(context):
     u'''add publication tabs and reorder logical order'''
     _logger.warn(u'Adding publications to MCL front page.')
@@ -95,4 +96,5 @@ def byeByePloneAppLDAP(context):
     #     qi = plone.api.portal.get_tool('portal_quickinstaller')
     #     qi.uninstallProducts(['plone.app.ldap'])
     # Remove the 
+    # But it left all this cruft!
     pass
